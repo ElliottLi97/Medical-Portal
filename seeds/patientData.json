@@ -1,0 +1,27 @@
+[
+  {
+    "id": "00001",
+    "name": "Charles Kim",
+    "gender": "male",
+    "email": "charleskim@hgmail.com",
+    "password": "ch@rl3sk1m",
+    "address": "57683 Main St"
+  },
+  {
+    "id": "00002",
+    "name": "Elliot Li",
+    "gender": "male",
+    "email": "elliotli@gmail.com",
+    "password": "ell10tl1",
+    "address": "321 Main St"
+  },
+  {
+    "id": "00003",
+    "name": "Princess Disco",
+    "gender": "female",
+    "email": "princessdisco@gmail.com",
+    "password": "d1sc0b@ll",
+    "address": "123 Main St"
+
+  }
+]

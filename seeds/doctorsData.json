@@ -1,0 +1,23 @@
+[
+  {
+    "id": "0000001",
+    "name": "Jake Smith",
+    "gender": "male",
+    "email": "jakesmith@hospital.com",
+    "password": "j@kesm1th"
+  },
+  {
+    "id": "0000002",
+    "name": "Rob Brown",
+    "gender": "male",
+    "email": "robbrown@hospital.com",
+    "password": "r0bbr0wn"
+  },
+  {
+    "id": "0000003",
+    "name": "Susan Gartner",
+    "gender": "female",
+    "email": "susangartner@hospital.com",
+    "password": "sus@ng@rtn3r"
+  }
+]
