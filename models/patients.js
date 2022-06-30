@@ -29,13 +29,6 @@ Patient.init(
         address:{
             type: DataTypes.STRING
         },
-        medical_id:{
-            type: DataTypes.INTEGER,
-            references: {
-              model: 'history',
-              key: 'id',
-            },
-        },
         password: {
             type: DataTypes.STRING,
             allowNull: false,
