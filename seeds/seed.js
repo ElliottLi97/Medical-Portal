@@ -16,27 +16,27 @@ const historyData = require('./historyData.json');
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  const patient = await Patients.bulkCreate(patientData, {
+  await Patients.bulkCreate(patientData, {
     individualHooks: true,
     returning: true,
   });
 
-  const appointment = await Appointments.bulkCreate(appointmentData, {
+  await Appointments.bulkCreate(appointmentData, {
     individualHooks: true,
     returning: true,
   });
 
-  const doctors = await Doctors.bulkCreate(doctorsData, {
+  await Doctors.bulkCreate(doctorsData, {
     individualHooks: true,
     returning: true,
   });
 
-  const schedule = await Schedules.bulkCreate(schedulesData, {
+  await Schedules.bulkCreate(schedulesData, {
     individualHooks: true,
     returning: true,
   });
 
-  const history = await History.bulkCreate(historyData, {
+  await History.bulkCreate(historyData, {
     individualHooks: true,
     returning: true,
   });
