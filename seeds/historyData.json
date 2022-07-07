@@ -1,0 +1,16 @@
+[
+    {
+        "data": "Previous history: Had mumps",
+        "medications": "antidepressents - fluoxetine (Prozac)",
+        "patient_id": "00001"
+    },
+    {
+        "data": "Previous history: Had chicken poxs",
+        "patient_id": "00002"
+    },
+    {
+        "data": "Previous history: Had a cold",
+        "medications": "birth control",
+        "patient_id": "00003"
+    }
+]
