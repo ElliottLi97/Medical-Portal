@@ -1,4 +1,3 @@
-const appointment = require('./appointments');
 const Appointments = require('./appointments');
 const Doctors = require('./doctors');
 const History = require('./history');
