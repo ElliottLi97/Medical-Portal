@@ -1,0 +1,14 @@
+[
+    {
+        "data": "Previous history: Had mumps",
+        "patient_id": "00001"
+    },
+    {
+        "data": "Previous history: Had chicken pocks",
+        "patient_id": "00002"
+    },
+    {
+        "data": "Previous history: Had a cold",
+        "patient_id": "00003"
+    }
+]
