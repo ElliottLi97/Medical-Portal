@@ -1,21 +1,27 @@
 const { Model, DataTypes } = require('sequelize');
+const { Appointments } = require('.');
 const sequelize = require('../config/connection');
 
 class History extends Model {}
 
 History.init(
   {
-    data:{
-        type: DataTypes.STRING,
-        allowNull: false,
-    },//can add more specific data later
+    data: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    medications: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: 'N/A',
+    },
     patient_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'patient',
         key: 'id',
-      }
-    }
+      },
+    },
   },
   {
     sequelize,
