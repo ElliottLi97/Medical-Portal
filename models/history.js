@@ -5,6 +5,12 @@ class History extends Model {}
 
 History.init(
   {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
+    },
     data:{
         type: DataTypes.STRING,
         allowNull: false,
