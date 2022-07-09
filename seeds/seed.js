@@ -21,11 +21,6 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  await Appointments.bulkCreate(appointmentData, {
-    individualHooks: true,
-    returning: true,
-  });
-
   await Doctors.bulkCreate(doctorsData, {
     individualHooks: true,
     returning: true,
@@ -36,6 +31,10 @@ const seedDatabase = async () => {
     returning: true,
   });
 
+  await Appointments.bulkCreate(appointmentData, {
+    individualHooks: true,
+    returning: true,
+  });
   await History.bulkCreate(historyData, {
     individualHooks: true,
     returning: true,
