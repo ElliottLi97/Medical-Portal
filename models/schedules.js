@@ -5,6 +5,12 @@ class Schedule extends Model {}
 
 Schedule.init(
   {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
+    },
     days:{
         type: DataTypes.STRING,
         allowNull: false,

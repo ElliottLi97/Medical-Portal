@@ -15,6 +15,7 @@ History.init(
       allowNull: false,
       defaultValue: 'N/A',
     },
+
     patient_id: {
       type: DataTypes.INTEGER,
       references: {
