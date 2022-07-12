@@ -21,5 +21,5 @@ module.exports = {
     },
 
     sidebarHandleBar:
-    (context, options) => { return 'dynamicPartial' };
+    (context, options) => { return 'dynamicPartial' }
   };
