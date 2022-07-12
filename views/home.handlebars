@@ -1,26 +1,35 @@
-<div class="row">
-    <div class="col-md-6">
-        <h2> ⭐️  Medical Portal</h2>
+<div class="container">
+    <h2>Welcome {{patient.name}}!</h2>
+    <p>This is a secure medical portal to help connect and provide
+        you with access and tools to assist you with your medical
+        needs
+    </p>
+    <div class="row">
+        <div class="col-sm col-xs-12">
+            <div class="card">
+                <img src="/image/appointments.png" alt="Card appointment" />
+                <h5 class="card-title">Appointments</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{patient.name}}</h6>
+                <p class="card-text">{{patient.history.data}}</p>
+                <p class="card-text"><strong>{{patient.appointment.status}}</strong></p>
+                <p class="card-text">{{patient.doctors.name}}</p>
+            </div>
+        </div>
+        <div class="col-sm col-xs-12">
+            <div class="card">
+                <img src="/image/history.png" alt="Card history" />
+                <h5 class="card-title">Patient History</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Current Medications: {{patient.history.medications}}</h6>
+                <p class="card-text">{{patient.history.data}}</p>
+            </div>
+        </div>
+        {{!-- <div class="col-sm col-xs-12">
+            <div class="card">
+                <img src="//placehold.it/250?text=AhPuch.jpg" alt="Card image cap" />
+                <h1> Ah Puch</h1>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div> --}}
     </div>
-
-        <div class="card" style="width: 18rem;">
-    <div class="card-body">
-        <h5 class="card-title">Appointments</h5>
-        <h6 class="card-subtitle mb-2 text-muted">{{posts.name}}</h6>
-        <p class="card-text">{{posts.history.data}}</p>
-        <p class="card-text"><strong>{{appointment.status}}</strong></p>
-        <p class="card-text">{{doctors.name}}</p>
-    </div>
-    </div>
-
-
-        <div class="card" style="width: 18rem;">
-    <div class="card-body">
-        <h5 class="card-title">Patient History</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Current Medications: {{history.medications}}</h6>
-        <p class="card-text">Previous History: {{history.data}}</p>
-    </div>
-    </div>
-
-
 </div>
