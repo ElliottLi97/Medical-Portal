@@ -3,18 +3,18 @@
     "days": "MWTh",
     "schedule_start": "January 1, 2022",
     "schedule_end": "January 4, 2022",
-    "doctor_id": "0000001"
+    "doctor_id": 1
   },
   {
     "days": "TWF",
     "schedule_start": "January 2, 2022",
     "schedule_end": "January 5, 2022",
-    "doctor_id": "0000002"
+    "doctor_id": 2
   },
   {
     "days": "TThF",
     "schedule_start": "January 2, 2022",
     "schedule_end": "January 5, 2022",
-    "doctor_id": "0000003"
+    "doctor_id": 3
   }
 ]
