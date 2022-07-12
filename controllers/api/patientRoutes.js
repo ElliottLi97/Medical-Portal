@@ -33,16 +33,16 @@ router.post('/', (req, res) => {
 
 router.post('/login', (req, res) => {
     Patients.findOne({
-            where: { name: req.body.email }
+            where: { email: req.body.email }
         }).then(dbUserData => {
             if (!dbUserData) {
-                res.status(400).json({ message: 'No user with that email!' });
+                res.status(400).json({ message: 'Invalid email or password.' });
                 return;
             }
 
             const validPassword = dbUserData.checkPassword(req.body.password);
             if (!validPassword) {
-                res.status(400).json({ message: 'Incorrect password!' });
+                res.status(400).json({ message: 'Invalid email or password.' });
                 return;
             }
             req.session.save(() => {
