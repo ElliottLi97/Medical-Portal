@@ -9,7 +9,7 @@ module.exports = {
     },
     get_emoji: () => {
       const randomNum = Math.random();
-  
+
       // Return a random emoji
       if (randomNum > 0.7) {
         return `<span for="img" aria-label="lightbulb">💡</span>`;
@@ -19,4 +19,7 @@ module.exports = {
         return `<span for="img" aria-label="gear">⚙️</span>`;
       }
     },
+
+    sidebarHandleBar:
+    (context, options) => { return 'dynamicPartial' };
   };
