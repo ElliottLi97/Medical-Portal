@@ -4,8 +4,11 @@
     </div>
 
     <div>
+        Handlebars.registerPartial("sidebarHandleBar", document.getElementById("person-partial").innerHTML);
         {{> (sidebarHandleBar) }}
     </div>
+
+
         <div class="card" style="width: 18rem;">
     <div class="card-body">
         <h5 class="card-title">Appointments</h5>
