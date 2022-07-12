@@ -8,10 +8,10 @@ const patientRoutes = require('./patientRoutes');
 const scheduleRoutes = require('./scheduleRoutes');
 
 router.use('appointments', apptRoutes);
-router.use('doctorRoutes', doctorRoutes);
-router.use('historyRoutes', historyRoutes);
-router.use('patientRoutes', patientRoutes);
-router.use('scheduleRoutes', scheduleRoutes);
+router.use('doctors', doctorRoutes);
+router.use('history', historyRoutes);
+router.use('/patients', patientRoutes);
+router.use('schedule', scheduleRoutes);
 
 
 //exporting functions and values.

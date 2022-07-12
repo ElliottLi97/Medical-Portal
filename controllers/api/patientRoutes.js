@@ -13,12 +13,14 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
     Patients.create({
-        username: req.body.username,
-        password: req.body.password
+        name: req.body.name,
+        password: req.body.password,
+        email: req.body.email
     }).then(dbUserData => {
             req.session.save(() => {
                 req.session.user_id = dbUserData.id;
-                req.session.username = dbUserData.username;
+                req.session.name = dbUserData.name;
+                req.session.email = dbUserData.email;
                 req.session.loggedIn = true;
 
                 res.json(dbUserData);
@@ -31,10 +33,10 @@ router.post('/', (req, res) => {
 
 router.post('/login', (req, res) => {
     Patients.findOne({
-            where: { username: req.body.username }
+            where: { name: req.body.email }
         }).then(dbUserData => {
             if (!dbUserData) {
-                res.status(400).json({ message: 'No user with that username!' });
+                res.status(400).json({ message: 'No user with that email!' });
                 return;
             }
 
@@ -45,7 +47,7 @@ router.post('/login', (req, res) => {
             }
             req.session.save(() => {
                 req.session.user_id = dbUserData.id;
-                req.session.username = dbUserData.username;
+                req.session.name = dbUserData.email;
                 req.session.loggedIn = true;
                 res.json({ user: dbUserData, message: 'You are now logged in!' });
             });

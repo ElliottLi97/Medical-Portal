@@ -21,7 +21,8 @@ Patient.init(
     },
     gender: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
+      defaultValue: " "
     },
     email: {
       type: DataTypes.STRING,
@@ -32,6 +33,7 @@ Patient.init(
     },
     address: {
       type: DataTypes.STRING,
+      allowNull: true,
     },
     password: {
       type: DataTypes.STRING,
