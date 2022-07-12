@@ -6,7 +6,7 @@
         <div class="card" style="width: 18rem;">
     <div class="card-body">
         <h5 class="card-title">Appointments</h5>
-        <h6 class="card-subtitle mb-2 text-muted">{{appointment.appointment_start}}</h6>
+        <h6 class="card-subtitle mb-2 text-muted">{{patient.appointment.appointment_start}}</h6>
         <p class="card-text">{{appointment.concerns}}</p>
         <p class="card-text"><strong>{{appointment.status}}</strong></p>
         <p class="card-text">{{doctors.name}}</p>
@@ -17,8 +17,8 @@
         <div class="card" style="width: 18rem;">
     <div class="card-body">
         <h5 class="card-title">Patient History</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Current Medications: {{history.medications}}</h6>
-        <p class="card-text">Previous History: {{history.data}}</p>
+        <h6 class="card-subtitle mb-2 text-muted">Current Medications: {{paitient.history.medications}}</h6>
+        <p class="card-text">Previous History: {{patient.history.data}}</p>
     </div>
     </div>
 
