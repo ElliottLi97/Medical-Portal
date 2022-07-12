@@ -1,6 +1,5 @@
 [
   {
-    "id": "00001",
     "name": "Charles Kim",
     "gender": "male",
     "email": "charleskim@hgmail.com",
@@ -8,7 +7,6 @@
     "address": "57683 Main St"
   },
   {
-    "id": "00002",
     "name": "Elliot Li",
     "gender": "male",
     "email": "elliotli@gmail.com",
@@ -16,12 +14,18 @@
     "address": "321 Main St"
   },
   {
-    "id": "00003",
     "name": "Princess Disco",
     "gender": "female",
     "email": "princessdisco@gmail.com",
     "password": "d1sc0b@ll",
     "address": "123 Main St"
 
+  },
+  {
+    "name": "Test",
+    "gender": "Test",
+    "email": "test@test.com",
+    "password": "testtest",
+    "address": "123 Main St"
   }
 ]
