@@ -24,9 +24,9 @@
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a class="dropdown-item" href="#">{{patient.doctors.name}}</a>
-                            <a class="dropdown-item" href="#">{{patient.doctors.name}}</a>
-                            <a class="dropdown-item" href="#">{{patient.doctors.name}}</a>
+                            {{#each patient.doctors.name}}
+                            <a class="dropdown-item" href="#">{{this}}</a>
+                            {{/each}}
                         </div>
                     </div>
                 </div>
