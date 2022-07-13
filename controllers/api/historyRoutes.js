@@ -9,7 +9,9 @@ router.put('/edit', withAuth, async (req, res) => {
             weight: req.body.weight,
             allergies: req.body.allergies,
             medications: req.body.medications,
-            data: req.body.data,
+            data: req.body.data
+        }
+        ,{
             where: {
                 patient_id: req.session.user_id,
             }

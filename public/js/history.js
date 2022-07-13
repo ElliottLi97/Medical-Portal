@@ -7,7 +7,7 @@ const historyFormHandler = async (event) => {
     const allergies = document.querySelector('#allergies').value.trim();
     const medications = document.querySelector('#medications').value.trim();
     const data = document.querySelector('#data').value.trim();
-    
+
     const response = await fetch('/api/historyRoutes/edit', {
         method: 'PUT',
         body: JSON.stringify({ height, weight, allergies, medications, data }),
@@ -18,6 +18,7 @@ const historyFormHandler = async (event) => {
     // If successful, redirect the browser to the profile page
     document.location.replace('/');
     } else {
+        console.log("error")
     alert(response.statusText);
     }
 }
