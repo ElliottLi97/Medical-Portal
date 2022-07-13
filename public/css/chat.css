@@ -38,6 +38,11 @@ a {
 	font-size: 17px;
 }
 
+.form-control {
+	background-color: transparent;
+	border: none !important;
+}
+
 /* Chat Page */
 
 .chat-container {
