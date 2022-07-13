@@ -1,25 +1,22 @@
 [
   {
     "status": "Not Started",
-    "concerns": "rash on my side",
-    "appointment_start": "January 1, 2022",
-    "appointment_end": "January 1, 2022",
+    "datetime": "2022-07-13T10:00",
+    "concern": "rash on my side",
     "patient_id": 1,
     "doctor_id": 1
   },
   {
     "status": "Started",
-    "concerns": "I found a lump on my side",
-    "appointment_start": "January 2, 2022",
-    "appointment_end": "January 2, 2022",
+    "datetime": "2022-08-17T08:00",
+    "concern": "I found a lump on my side",
     "patient_id": 2,
     "doctor_id": 2
   },
   {
     "status": "Not Started",
-    "concerns": "I have a migraine",
-    "appointment_start": "January 3, 2022",
-    "appointment_end": "January 3, 2022",
+    "datetime": "2022-06-15T09:00",
+    "concern": "I have a migraine",
     "patient_id": 3,
     "doctor_id": 3
   }
