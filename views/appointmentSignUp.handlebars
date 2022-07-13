@@ -1,0 +1,35 @@
+<div>
+    <div class="container">
+        <div class="row">
+            <h2> Select an Appointment Data and Doctor</h2>
+                <div class="calendar">
+                <div class="header active">
+                <a data-action="prev-month" href="javascript:void(0)" title="Previous Month"><i></i></a>
+                <div class="text" data-render="month-year"><span>July &nbsp; 2022</span></div>
+                <a data-action="next-month" href="javascript:void(0)" title="Next Month"><i></i></a>
+                </div>
+                <div class="months active" data-flow="left">
+                <div class="month month-a" data-active="true">
+                <div class="render render-a" data-date="July - 2022" data-month="6"><div class="table"><div class="row head"><div class="cell">Sun</div><div class="cell">Mon</div><div class="cell">Tue</div><div class="cell">Wed</div><div class="cell">Thu</div><div class="cell">Fri</div><div class="cell">Sat</div></div><div class="row"><div class="cell disable">26</div><div class="cell disable">27</div><div class="cell disable">28</div><div class="cell disable">29</div><div class="cell disable">30</div><div class="cell"><span>1</span></div><div class="cell"><span>2</span></div></div><div class="row"><div class="cell"><span>3</span></div><div class="cell"><span>4</span></div><div class="cell"><span>5</span></div><div class="cell"><span>6</span></div><div class="cell"><span>7</span></div><div class="cell"><span>8</span></div><div class="cell"><span>9</span></div></div><div class="row"><div class="cell"><span>10</span></div><div class="cell"><span>11</span></div><div class="cell active"><span>12</span></div><div class="cell"><span>13</span></div><div class="cell"><span>14</span></div><div class="cell"><span>15</span></div><div class="cell"><span>16</span></div></div><div class="row"><div class="cell"><span>17</span></div><div class="cell"><span>18</span></div><div class="cell"><span>19</span></div><div class="cell"><span>20</span></div><div class="cell"><span>21</span></div><div class="cell"><span>22</span></div><div class="cell"><span>23</span></div></div><div class="row"><div class="cell"><span>24</span></div><div class="cell"><span>25</span></div><div class="cell"><span>26</span></div><div class="cell"><span>27</span></div><div class="cell"><span>28</span></div><div class="cell"><span>29</span></div><div class="cell"><span>30</span></div></div><div class="row"><div class="cell"><span>31</span></div><div class="cell disable">1</div><div class="cell disable">2</div><div class="cell disable">3</div><div class="cell disable">4</div><div class="cell disable">5</div><div class="cell disable">6</div></div></div></div>
+                </div>
+                <div class="month month-b" data-active="false">
+                <div class="render render-b"></div>
+                </div>
+                </div>
+                </div>
+                <div class="doctorsDropdown">
+                    <div class="dropdown show">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Doctors
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">{{patient.doctors.name}}</a>
+                            <a class="dropdown-item" href="#">{{patient.doctors.name}}</a>
+                            <a class="dropdown-item" href="#">{{patient.doctors.name}}</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
