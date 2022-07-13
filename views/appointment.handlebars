@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title><U>Upcoming/past Appointments</U></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+<!-- this portion is for upcoming appointments -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="feature title-page text-left" style="padding-bottom: 10px;">
+                    <h2 class="Header" style="text-align: center">Upcoming Appointments</h2>
+                </div>
+                <!-- end build -->
+            </div>
+            <!-- end col -->
+        </div>
+        <div class="container">
+                <div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <td>Appointment Date</td>
+                                <td>Doctor</td>
+                                <td>Concern</td>
+                                <td>Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <div>
+                                {{#each patients}}
+                                <tr>
+                                    <td>{{appointments.appointment_start}}</td>
+                                    <td>{{appointments.doctor_id}}</td>
+                                    <td>{{appointments.concerns}}</td>
+                                    <td>{{appointments.status}}</td>
+                                </tr>
+                                {{/each}}
+                            </div>
+                        </tbody>
+                    </table>
+                </div>
+            </script>
+        </div>
+    </div>
+
+<!-- this portion is for the past appointments -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="feature title-page text-left" style="padding-bottom: 10px;">
+                    <h2 class="Header" style="text-align: center">Past Appointments</h2>
+                </div>
+                <!-- end build -->
+            </div>
+            <!-- end col -->
+        </div>
+        <div class="container">
+                <div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <td>Appointment Date</td>
+                                <td>Doctor</td>
+                                <td>Concern</td>
+                                <td>Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <div>
+                                {{#each patients}}
+                                <tr>
+                                    <td>{{appointments.appointment_end}}</td>
+                                    <td>{{appointments.doctor_id}}</td>
+                                    <td>{{appointments.concerns}}</td>
+                                    <td>{{appointments.status}}</td>
+                                </tr>
+                                {{/each}}
+                            </div>
+                        </tbody>
+                    </table>
+                </div>
+            </script>
+        </div>
+    </div>
+</body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+    <script type="text/javascript"></script>
+
+    
+</html>

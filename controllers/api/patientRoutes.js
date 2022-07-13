@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
             attributes: { exclude: ['[password'] }
         }).then(dbUserData => res.json(dbUserData))
         .catch(err => {
-            console.log(err);
+            console.log(err, "The password you inputted was incorrect.");
             res.status(500).json(err);
         });
 });
@@ -26,10 +26,11 @@ router.post('/', (req, res) => {
                 res.json(dbUserData);
             });
         }).catch(err => {
-            console.log(err);
+            console.log(err, "There was an error creating your account.");
             res.status(500).json(err);
         });
 });
+
 
 router.post('/login', (req, res) => {
     Patients.findOne({

@@ -24,8 +24,8 @@ router.get('/', withAuth, async (req, res) => {
           model: History,
         },
         {
-          model: Appointments,
-        }
+          model: Appointments
+        },
       ],
     });
 
@@ -62,8 +62,8 @@ router.get('/appointments', withAuth, async (req, res) => {
       attributes: { exclude: ['password'] },
       include: [
         {
-          model: Appointments,
-        }
+          model: Appointments
+        },
       ],
     });
 
