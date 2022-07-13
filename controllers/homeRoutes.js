@@ -76,7 +76,7 @@ router.get('/appointments/signup', withAuth, async (req, res) => {
     const doctors = doctorData.map((doctor) => doctor.get({ plain: true }));
     console.log("doctor", doctors);
     // Pass serialized data and session flag into template
-    res.render('appointmentSignup', {
+    res.render('appointmentSignUp', {
       doctors,
       loggedIn: req.session.loggedIn
     });
