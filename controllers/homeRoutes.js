@@ -25,20 +25,42 @@ router.get('/', withAuth, async (req, res) => {
         },
         {
           model: Appointments,
+          include:[{
+            model: Doctors,
+            attributes: {exclude:['password', 'email']}
+          }]
         }
       ],
     });
 
-    console.log("patientData", patientData);
+    // const appointmentData = await Appointments.findAll ({
+    //   where:{
+    //     patient_id: req.session.user_id
+    //   },
+    //   include: [
+    //     {model: Doctors,
+    //     attributes: {exclude:['password', 'email']}}
+    //   ]
+    // })
+
+    //console.log("patientData", appointmentData);
     // Serialize data so the template can read it
     // const posts = postData.map((post) => post.get({ plain: true }));
     const patient = patientData.get({
       plain: true
     });
 
+    // const appointments = appointmentData.get({
+    //   plain: true
+    // });
+    // const appointments = appointmentData.map((appointment) => appointment.get({ plain: true }));
     console.log("patient", patient);
+    const appointments = patient.appointments [0]
+    console.log(appointments)
+    // console.log("appointment", "**************************",appointments)
     // Pass serialized data and session flag into template
     res.render('home', {
+      appointments,
       patient,
       loggedIn: req.session.loggedIn
     });
