@@ -1,8 +1,7 @@
 const router = require('express').Router();
 const { History } = require('../../models');
-const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/auth');
-console.log("test")
+
 router.put('/edit', withAuth, async (req, res) => {
     try {
         const historyData = await History.update({

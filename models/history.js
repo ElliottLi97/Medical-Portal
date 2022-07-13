@@ -1,5 +1,4 @@
 const { Model, DataTypes } = require('sequelize');
-const { Appointments } = require('.');
 const sequelize = require('../config/connection');
 
 class History extends Model {}
