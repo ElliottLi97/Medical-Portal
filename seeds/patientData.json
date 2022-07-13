@@ -1,5 +1,14 @@
 [
   {
+    "id": 3,
+    "name": "Test",
+    "gender": "Test",
+    "email": "test@test.com",
+    "password": "testtest",
+    "address": "123 Main St",
+    "doctor_id": "1"
+  },
+  {
     "name": "Charles Kim",
     "gender": "male",
     "email": "charleskim@hgmail.com",
@@ -22,14 +31,5 @@
     "password": "d1sc0b@ll",
     "address": "123 Main St",
     "doctor_id": "3"
-
-  },
-  {
-    "name": "Test",
-    "gender": "Test",
-    "email": "test@test.com",
-    "password": "testtest",
-    "address": "123 Main St",
-    "doctor_id": "1"
   }
 ]

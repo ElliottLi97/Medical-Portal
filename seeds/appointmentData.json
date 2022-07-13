@@ -19,5 +19,12 @@
     "concern": "I have a migraine",
     "patient_id": 3,
     "doctor_id": 3
+  },
+  {
+    "status": "Test",
+    "datetime": "2022-06-15T09:00",
+    "concern": "Test",
+    "patient_id": 3,
+    "doctor_id": 3
   }
 ]

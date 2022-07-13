@@ -55,7 +55,7 @@ router.get('/', withAuth, async (req, res) => {
     // });
     // const appointments = appointmentData.map((appointment) => appointment.get({ plain: true }));
     console.log("patient", patient);
-    const appointments = patient.appointments [0]
+    const appointments = patient.appointments
     console.log(appointments)
     // console.log("appointment", "**************************",appointments)
     // Pass serialized data and session flag into template
