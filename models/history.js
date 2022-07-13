@@ -9,6 +9,7 @@ History.init(
     data: {
       type: DataTypes.STRING,
       allowNull: false,
+      defaultValue: 'N/A',
     },
     medications: {
       type: DataTypes.STRING,

@@ -3,7 +3,7 @@ const router = require('express').Router();
 //creates the routers
 const apptRoutes = require('./apptRoutes');
 const doctorRoutes = require('./doctorRoutes');
-const historyRoutes = require('./historyRoutes');
+const historyRoutes = require('../historyRoutes');
 const patientRoutes = require('./patientRoutes');
 const scheduleRoutes = require('./scheduleRoutes');
 
