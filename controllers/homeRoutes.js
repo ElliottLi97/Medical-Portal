@@ -101,6 +101,7 @@ router.get('/history', withAuth, async (req, res) => {
       include: [
         {
           model: History,
+          attributes: ['height', 'weight', 'allergies', 'medications', 'data']
         }
       ],
     });

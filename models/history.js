@@ -6,15 +6,25 @@ class History extends Model {}
 
 History.init(
   {
-    data: {
+    height: {
       type: DataTypes.STRING,
-      allowNull: false,
-      defaultValue: 'N/A',
+      allowNull: true
+    },
+    weight: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    allergies: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     medications: {
       type: DataTypes.STRING,
-      allowNull: false,
-      defaultValue: 'N/A',
+      allowNull: true,
+    },
+    data: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
 
     patient_id: {

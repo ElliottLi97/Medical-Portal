@@ -1,0 +1,38 @@
+<div class="container">
+  <h2 class="title mt-5">Update {{patient.name}} history</h2><hr>
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card my-5">
+        <form id="edit-history-form" class="card-body cardbody-color p-lg-5">
+          <div class="text-center">
+            <img src="/image/history.png"
+              class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3" width="150px" alt="profile">
+          </div>
+          <div
+          <div class="mb-3">
+            <input type="text" class="form-control" id="height" placeholder="Height" value="{{patient.history.height}}">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="weight" placeholder="Weight" value="{{patient.history.weight}}">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="weight" placeholder="Allergies" value="{{patient.history.allergies}}">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="weight" placeholder="Medications" value="{{patient.history.medications}}">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="weight" placeholder="Prior History Data" value="{{patient.history.data}}">
+          </div>
+          <div class="btn-group">
+            <button type="submit" class="btn btn-color px-5 mb-5 w-100">Save Changes</button>
+            <button type="cancel" class="btn btn-color px-5 mb-5 w-100" onclick="window.location='/';return false;">Cancel</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="/js/history.js"></script>
