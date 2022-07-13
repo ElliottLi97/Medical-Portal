@@ -9,6 +9,7 @@
     "doctor_id": "1"
   },
   {
+    "id": 1,
     "name": "Charles Kim",
     "gender": "male",
     "email": "charleskim@hgmail.com",
@@ -17,6 +18,7 @@
     "doctor_id": "1"
   },
   {
+    "id": 2,
     "name": "Elliot Li",
     "gender": "male",
     "email": "elliotli@gmail.com",
@@ -25,6 +27,7 @@
     "doctor_id": "2"
   },
   {
+    "id": 4,
     "name": "Princess Disco",
     "gender": "female",
     "email": "princessdisco@gmail.com",
