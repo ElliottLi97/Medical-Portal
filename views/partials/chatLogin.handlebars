@@ -1,0 +1,30 @@
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+    crossorigin="anonymous"
+/>
+<link rel="stylesheet" href="css/chat.css" />
+
+<div class="join-container">
+    {{!-- <header class="join-header">
+        <h1><i class="fas fa-smile"></i> Chat-Med</h1>
+    </header> --}}
+    <main class="join-main">
+        <form action="chat.html">
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Enter username..." required />
+            </div>
+            <div class="form-control">
+                <label for="room">Room</label>
+                <select name="room" id="room">
+                    <option value="DoctorRoom">Doctor's Room</option>
+                    <option value="TechSupport">Technical Support</option>
+                    <option value="AppointmentSupport">Appointment Support</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Join Chat</button>
+        </form>
+    </main>
+</div>
