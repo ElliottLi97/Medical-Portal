@@ -48,6 +48,82 @@ router.get('/', withAuth, async (req, res) => {
   };
 });
 
+router.get('/appointments', withAuth, async (req, res) => {
+
+  if (!req.session.loggedIn) {
+    res.redirect('/login');
+    return;
+  }
+
+  try {
+    // Get all posts and JOIN with user data
+    console.log(req.session.user_id, "**********")
+    const patientData = await Patients.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [
+        {
+          model: Appointments,
+        }
+      ],
+    });
+
+    console.log("patientData", patientData);
+    // Serialize data so the template can read it
+    // const posts = postData.map((post) => post.get({ plain: true }));
+    const patient = patientData.get({
+      plain: true
+    });
+
+    console.log("patient", patient);
+    // Pass serialized data and session flag into template
+    res.render('appointment', {
+      patient,
+      loggedIn: req.session.loggedIn
+    });
+  } catch (err) {
+    console.log("err:", err);
+    res.status(500).json(err);
+  };
+});
+
+router.get('/history', withAuth, async (req, res) => {
+
+  if (!req.session.loggedIn) {
+    res.redirect('/login');
+    return;
+  }
+
+  try {
+    // Get all posts and JOIN with user data
+    console.log(req.session.user_id, "**********")
+    const patientData = await Patients.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [
+        {
+          model: History,
+        }
+      ],
+    });
+
+    console.log("patientData", patientData);
+    // Serialize data so the template can read it
+    // const posts = postData.map((post) => post.get({ plain: true }));
+    const patient = patientData.get({
+      plain: true
+    });
+
+    console.log("patient", patient);
+    // Pass serialized data and session flag into template
+    res.render('history', {
+      patient,
+      loggedIn: req.session.loggedIn
+    });
+  } catch (err) {
+    console.log("err:", err);
+    res.status(500).json(err);
+  };
+});
+
 router.get('/appointments/signup', withAuth, async (req, res) => {
 
   if (!req.session.loggedIn) {
