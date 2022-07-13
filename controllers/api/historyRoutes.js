@@ -1,33 +1,24 @@
 const router = require('express').Router();
 const { History } = require('../../models');
-
+const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/auth');
-
-router.post('/', withAuth, async (req, res) => {
+console.log("test")
+router.put('/edit', withAuth, async (req, res) => {
     try {
-        const newHistory = await History.create({
-            ...req.body,
-            user_id: req.session.user_id,
-        });
-
-        res.status(200).json(newHistory);
-    } catch (err) {
-        res.status(400).json(err);
-    }
-});
-
-router.delete('/:id', withAuth, async (req, res) => {
-    try {
-        const historyData = await History.destroy({
+        const historyData = await History.update({
+            height: req.body.height,
+            weight: req.body.weight,
+            allergies: req.body.allergies,
+            medications: req.body.medications,
+            data: req.body.data,
             where: {
-                id: req.params.id,
-                user_id: req.session.user_id,
-            },
+                patient_id: req.session.user_id,
+            }
         });
 
         if (!historyData) {
             res.status(404).json({
-                message: 'No project found with this id!'
+                message: 'No history found with this id!'
             });
             return;
         }
@@ -37,5 +28,8 @@ router.delete('/:id', withAuth, async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+
+
 
 module.exports = router;

@@ -19,9 +19,12 @@
         <div class="col-sm col-xs-12">
             <div class="card">
                 <img src="/image/history.png" alt="Card history" />
-                <h5 class="card-title">Patient History</h5>
+                <h5 class="card-title">Patient History <a href="/history" class="edit-history-link-text"><img class="edit-history-link" src="/image/edit.png"> Edit</a></h5>
+                <h6 class="card-subtitle mb-2 text-muted">Height: {{patient.history.height}}</h6>
+                <h6 class="card-subtitle mb-2 text-muted">Weight: {{patient.history.weight}}</h6>
+                <h6 class="card-subtitle mb-2 text-muted">Allergies: {{patient.history.allergies}}</h6>
                 <h6 class="card-subtitle mb-2 text-muted">Current Medications: {{patient.history.medications}}</h6>
-                <p class="card-text">{{patient.history.data}}</p>
+                <h6 class="card-subtitle mb-2 text-muted">Prior History Data: {{patient.history.data}}</h6>
             </div>
         </div>
         {{!-- <div class="col-sm col-xs-12">

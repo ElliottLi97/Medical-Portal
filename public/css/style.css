@@ -63,6 +63,11 @@ img {
 
 }
 
+.btn-color:hover {
+    color:royalblue;
+    transition: 0.7s;
+}
+
 .profile-image-pic {
     height: 200px;
     width: 200px;
@@ -74,6 +79,15 @@ img {
 }
 
 a {
+    text-decoration: none;
+}
+
+.edit-history-link {
+    height: 20px;
+    width: 20px;
+}
+
+.edit-history-link-text:hover {
     text-decoration: none;
 }
 
