@@ -4,21 +4,24 @@
     "gender": "male",
     "email": "charleskim@hgmail.com",
     "password": "ch@rl3sk1m",
-    "address": "57683 Main St"
+    "address": "57683 Main St",
+    "doctor_id": "1"
   },
   {
     "name": "Elliot Li",
     "gender": "male",
     "email": "elliotli@gmail.com",
     "password": "ell10tl1",
-    "address": "321 Main St"
+    "address": "321 Main St",
+    "doctor_id": "2"
   },
   {
     "name": "Princess Disco",
     "gender": "female",
     "email": "princessdisco@gmail.com",
     "password": "d1sc0b@ll",
-    "address": "123 Main St"
+    "address": "123 Main St",
+    "doctor_id": "3"
 
   },
   {
@@ -26,6 +29,7 @@
     "gender": "Test",
     "email": "test@test.com",
     "password": "testtest",
-    "address": "123 Main St"
+    "address": "123 Main St",
+    "doctor_id": "1"
   }
 ]
