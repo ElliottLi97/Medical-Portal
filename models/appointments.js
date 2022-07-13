@@ -16,17 +16,13 @@ Appointments.init(
       allowNull: false,
       defaultValue: "Not Started"
     },
-    concerns: {
+    concern: {
       type: DataTypes.STRING,
     },
-    appointment_start: {
+    datetime: {
       type: DataTypes.DATE,
       allowNull: false,
     },
-    appointment_end: {
-        type: DataTypes.DATE,
-        allowNull: false,
-      },
     patient_id: {
       type: DataTypes.INTEGER,
       references: {
