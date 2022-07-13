@@ -1,13 +1,28 @@
-const Appointments = require('./appointments');
 const Doctors = require('./doctors');
-const History = require('./history');
 const Patients = require('./patients');
+const Appointments = require('./appointments');
+const History = require('./history');
 const Schedules = require('./schedules');
 
 Patients.hasOne(History, {
     foreignKey: "patient_id",
     onDelete: 'CASCADE'
 });
+
+Doctors.hasMany(Patients, {
+    foreignKey: "doctor_id",
+    onDelete: 'CASCADE'
+});
+
+Doctors.belongsTo(Patients, {
+    foreignKey: 'doctor_id',
+});
+
+Patients.hasOne(Doctors, {
+    foreignKey: "doctor_id",
+    onDelete: 'CASCADE'
+});
+
 
 History.belongsTo(Patients, {
     foreignKey: 'patient_id',
@@ -39,4 +54,4 @@ Doctors.hasOne(Schedules,{
 Schedules.belongsTo(Doctors,{
     foreignKey:"doctor_id",
 })
-module.exports = { Appointments, Doctors, History, Patients, Schedules }
+module.exports = { Doctors, Patients, Appointments, History,  Schedules }
