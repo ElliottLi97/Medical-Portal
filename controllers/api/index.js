@@ -9,7 +9,7 @@ const scheduleRoutes = require('./scheduleRoutes');
 
 router.use('/appointments', apptRoutes);
 router.use('/doctorRoutes', doctorRoutes);
-router.use('/history', historyRoutes);
+router.use('/historyRoutes', historyRoutes);
 router.use('/patientRoutes', patientRoutes);
 router.use('/scheduleRoutes', scheduleRoutes);
 
