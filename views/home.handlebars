@@ -8,19 +8,19 @@
         <div class="col-sm col-xs-12">
             <div class="card ">
                 <img src="/image/appointments.png" alt="Card appointment" />
-                <h5 class="card-title">Appointments</h5>
-                <h6 class="card-subtitle mb-2 text-muted">{{patient.name}}</h6>
+                <h5 class="card-title">Upcoming Appointments <a href="/appointments/signup" class="edit-history-link-text"><img
+                            class="edit-history-link" src="/image/add_appointments.png"> Add</a></h5>
+                <!-- Add doctors primary care provider -->
 
                 {{#each appointments as |appointment| }}
-                <div class="appointmentcard">
-                    <p class="card-text">Appointment with {{appointment.doctor.name}} at {{appointment.datetime}}</p>
+                <div class="col-sm col-xs-12 appointmentcard">
+                    <p class="card-text">Dr. {{appointment.doctor.name}}<br> at {{appointment.datetime}}</p>
                     <p class="card-text"><strong>Reason(s) for visit: {{appointment.concern}}</strong></p>
                     <p class="card-text"><strong>{{appointment.status}}</strong></p>
 
                 </div>
                 {{/each}}
             </div>
-            <a href="/appointments/signup" class="login-link text-dark fw-bold">Make an Appointment</a>
         </div>
         <div class="col-sm col-xs-12">
             <div class="card">
@@ -34,6 +34,18 @@
                 <h6 class="card-subtitle mb-2 text-muted">Prior History Data: {{patient.history.data}}</h6>
             </div>
         </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm col-xs-12">
+            <div class="card">
+                <h5 class="card-title">Chat here!</h5>
+                <div class="col-sm col-xs-12">
+                    <p class="card-text">{{> chatLogin }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
         {{!-- <div class="col-sm col-xs-12">
             <div class="card">
                 <img src="//placehold.it/250?text=AhPuch.jpg" alt="Card image cap" />
@@ -42,7 +54,4 @@
                     content. This content is a little bit longer.</p>
             </div>
         </div> --}}
-    </div>
-    Chat here!
-    {{> chatLogin }}
 </div>

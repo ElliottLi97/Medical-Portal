@@ -71,7 +71,7 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 router.get('/appointments/signup', withAuth, async (req, res) => {
-//TO-DO: Get the patient data + doctor's information
+//TO-DO: Get the doctor's information
 
   if (!req.session.loggedIn) {
     res.redirect('/login');
@@ -79,29 +79,19 @@ router.get('/appointments/signup', withAuth, async (req, res) => {
   }
 
   try {
-    // Get the doctor's data and JOIN with user data
-    console.log(req.session.user_id, "**********")
-    const patientData = await Patients.findByPk(req.session.user_id, {
+    // Get the doctor's data
+    const doctorData = await Doctors.findAll({
       attributes: { exclude: ['password'] },
-      include: [
-        {
-          model: Doctors,
-          attributes: ['name']
-        }
-      ],
     });
 
-    console.log("patientData", patientData);
     // Serialize data so the template can read it
     // const posts = postData.map((post) => post.get({ plain: true }));
-    const patient = patientData.get({
-      plain: true
-    });
+    const doctors = doctorData.map(doctor => doctor.get({plain: true}));
 
-    console.log("patient", patient);
     // Pass serialized data and session flag into template
+    console.log(doctors)
     res.render('appointmentSignUp', {
-      patient,
+      doctors,
       loggedIn: req.session.loggedIn
     });
   } catch (err) {

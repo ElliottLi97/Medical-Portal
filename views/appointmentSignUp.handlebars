@@ -11,10 +11,11 @@
                     <input type="datetime-local" class="form-control" id="datetime">
                     </div>
                     <div class="mb-3">
-                        <label for="doctor">Choose a doctor: </label>
+                        <label for="doctor">Choose a doctor: {{name}}</label>
                         <select id="doctor_id" name="doctor">
-                            <option value="my doctor">My doc</option>
-                            <option value="the list of doctors">All other docs</option>
+                            {{#each doctors as |doctor|}}
+                                <option value="{{doctor.id}}">{{doctor.name}}</option>
+                            {{/each}}  
                         </select>
                         <input type="text" class="form-control" id="concern" placeholder="Reason for visit">
                     </div>
