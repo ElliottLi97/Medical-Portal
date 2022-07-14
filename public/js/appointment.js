@@ -6,7 +6,7 @@ const appointmentFormHandler = async (event) => {
     const doctor_id = document.querySelector('#doctor_id').value.trim();
     const concern = document.querySelector('#concern').value.trim();
 console.log(datetime);
-    /* const response = await fetch('/api/apptRoutes/add', {
+     const response = await fetch('/api/apptRoutes/add', {
         method: 'POST',
         body: JSON.stringify({ datetime, doctor_id, concern }),
         headers: { 'Content-Type': 'application/json' },
@@ -18,7 +18,7 @@ console.log(datetime);
     } else {
         console.log("error")
     alert(response.statusText);
-    } */
+    }
 }
 
 document.querySelector('#add-appointment-form').addEventListener('submit', appointmentFormHandler);

@@ -58,10 +58,8 @@ img {
 }
 
 .appointmentcard{
-    border: 2px black solid;
-    padding: 2px;
-    margin-bottom: 5px;
-    max-width:45%
+    border-bottom: 1px black solid;
+
 }
 
 .btn-color {
