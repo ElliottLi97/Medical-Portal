@@ -1,7 +1,5 @@
 # Medical-Portal
 
-
-
 ![License Badge](https://img.shields.io/github/license/ElliottLi97/Medical-Portal) ![Top Language](https://img.shields.io/github/languages/top/ElliottLi97/Medical-Portal)
 
 A CMS-style user login portal, where patients can secure access to view personal health information from anywhere with an Internet connection. Using a secure username and password, patients can view health information such as: Recent doctor visits. Discharge summaries including chat message.
